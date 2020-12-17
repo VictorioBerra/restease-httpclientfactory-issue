@@ -19,7 +19,7 @@ namespace RestEaseWorker
             Host.CreateDefaultBuilder(args)
                 .ConfigureServices((hostContext, services) =>
                 {
-                    services.AddHttpClient<IPersonAPI>();
+                    services.AddRestEaseClient<IPersonAPI>();
                     services.AddHostedService<Worker>();
                 });
     }
